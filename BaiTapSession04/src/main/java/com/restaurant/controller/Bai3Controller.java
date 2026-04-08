@@ -7,14 +7,13 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/bai3")
 public class Bai3Controller {
 
-    // Cách A (chuẩn REST)
+    
     @GetMapping("/orders/{id}")
     @ResponseBody
     public String getOrderByPath(@PathVariable long id) {
         return "Chi tiết đơn hàng số " + id;
     }
 
-    // Cách B (query string)
     @GetMapping("/orders")
     @ResponseBody
     public String getOrderByParam(@RequestParam long id) {
