@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+  <title>EDU-PATH</title>
+</head>
+<body>
+
+<header>
+  <h1>EDU-PATH</h1>
+  <p>Build your English Journey</p>
+</header>
+
+<nav>
+  <a th:href="@{/course/list}">Danh sách khóa học</a>
+</nav>
+
+<hr>
+
+<div layout:fragment="content"></div>
+
+</body>
+</html>

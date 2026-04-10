@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html layout:decorate="layout/main-layout"
+      xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.w3.org/1999/xhtml">
+
+<div layout:fragment="content">
+
+    <h2>Cập nhật khóa học</h2>
+
+    <form th:object="${course}"
+          th:action="@{/course/update}"
+          method="post">
+
+        <input type="hidden" th:field="*{code}" />
+
+        <label>Học phí:</label>
+        <input type="number" th:field="*{fee}" />
+
+        <br/>
+
+        <label>Ngày khai giảng:</label>
+        <input type="date" th:field="*{startDate}" />
+
+        <br/>
+
+        <button type="submit">Lưu</button>
+
+    </form>
+
+</div>
+</html>

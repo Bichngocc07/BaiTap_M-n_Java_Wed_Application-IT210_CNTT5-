@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html layout:decorate="layout/main-layout"
+      xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.w3.org/1999/xhtml">
+
+<div layout:fragment="content">
+
+    <h2 th:text="${course.name}"></h2>
+
+    <p><b>Mô tả:</b> <span th:text="${course.description}"></span></p>
+    <p><b>Giảng viên:</b> <span th:text="${course.instructor}"></span></p>
+    <p><b>Thời lượng:</b> <span th:text="${course.duration}"></span> tuần</p>
+
+    <p th:if="${course.isFull}" style="color:red">
+        HẾT CHỖ
+    </p>
+
+</div>
+</html>
