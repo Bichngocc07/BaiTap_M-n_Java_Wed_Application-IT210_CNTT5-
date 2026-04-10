@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Danh sách người dùng</h1>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Full Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Age</th>
+        <th>Avatar</th>
+    </tr>
+    <tr th:each="user: ${users}">
+        <td th:text="${user.getId()}"></td>
+        <td th:text="${user.getFullname()}"></td>
+        <td th:text="${user.getEmail()}"></td>
+        <td th:text="${user.getPhone()}"></td>
+        <td th:text="${user.getAge()}"></td>
+        <td><img width="100" height="100" th:src="${user.getAvatar()}" alt="123">/td>
+    </tr>
+    <tr>
+</table>
+</body>
+</html>
